@@ -15,6 +15,8 @@
                 {{ with .Params.description }}
                     <h2 class="section-description">{{ . }}</h2>
                 {{ end }}
+
+                <span class="section-description">To see changes to this page in your RSS reader, just import this link: <a href="./index.xml">feed</a></span>
             </div>
     
             {{- $image := partialCached "helper/image" (dict "Context" . "Type" "section") .RelPermalink "section" -}}

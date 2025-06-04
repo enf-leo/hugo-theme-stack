@@ -149,6 +149,13 @@
     }
 }
 
+
+.article-tags {
+  a {
+    padding: 4px 8px;
+  }
+}
+
 /* Compact style article list */
 .article-list--compact {
     border-radius: var(--card-border-radius);

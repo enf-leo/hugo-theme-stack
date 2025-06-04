@@ -28,3 +28,21 @@ footer.site-footer {
         }
     }
 }
+
+#footer-menu {
+    list-style: none;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10ch, 1fr));
+
+    gap: 3rem;
+
+    a {
+        height: 100%;
+        color: var(--body-text-color);
+        vertical-align: middle;
+        padding: 0;
+    }
+    margin-bottom: 2rem;
+}

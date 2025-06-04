@@ -1,5 +1,13 @@
 {{- $ThemeVersion := "3.30.0" -}}
 <footer class="site-footer">
+    <section class="menu" id="footer-menu">
+        {{ range .Site.Params.Footer.menu }}
+            <a href='{{ .url }}'>
+                <span>{{- .name -}}</span>
+            </a>
+        {{ end }}
+    </section>
+
     <section class="copyright">
         &copy; 
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}

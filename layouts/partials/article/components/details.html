@@ -48,6 +48,16 @@
     </footer>
     {{ end }}
 
+    {{ if .Params.tags }}
+    <header class="article-tags">
+        {{ range (.GetTerms "tags") }}
+            <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
+                {{ .LinkTitle }}
+            </a>
+        {{ end }}
+    </header>
+    {{ end }}
+
     {{ if .IsTranslated }}
         <footer class="article-translations">
             {{ partial "helper/icon" "language" }}
